@@ -3,7 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "../cssfiles/mainslider/mainslide.css";
 export default function MainnSlider() {
-  const [pause, setPause] = React.useState(false);
+  const [pause] = React.useState(false);
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
   });
