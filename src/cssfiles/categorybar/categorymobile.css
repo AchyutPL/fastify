@@ -1,0 +1,98 @@
+.shopByCategoryMob {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+.categoryMob {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .categoryMob {
+    visibility: visible;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0px 15px;
+  }
+  .shopByCategoryMob {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    display: block;
+    height: 100%;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+    transition: all 0.3s ease;
+  }
+  .showBar {
+    left: 0px;
+  }
+  .hideBar {
+    left: -300px;
+  }
+  .shopByCategoryMobile p {
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+  }
+  .rightmobcat a {
+    color: white;
+    text-decoration: none;
+    font-family: "Titillium Web", sans-serif;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 18px;
+    background-color: white;
+  }
+  .menu > p {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .shopByCategoryMob > div > div > h3 {
+    margin: 10px 18px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+  }
+  .shopByCategoryMob > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 20px 3px 8px;
+    margin: 10px 0px;
+    background-color: rgb(255, 255, 255);
+  }
+}
+.shopByCategoryMob > div > ul > li {
+  list-style: none;
+}
+.shopByCategoryMob > div > ul > li > a {
+  text-decoration: none;
+  color: black;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 17px;
+}
+.shopByCategoryMob > div > ul > li > a:hover {
+  color: red;
+}
+.ulList1,
+.ulList2,
+.ulList3,
+.ulList4 {
+  height: 1px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.showLists1,
+.showLists2,
+.showLists3,
+.showLists4 {
+  height: 140px;
+  transition: all 0.2s ease;
+}

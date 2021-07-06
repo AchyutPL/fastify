@@ -1,0 +1,260 @@
+.upperHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  padding: 0px 25px;
+  margin: 0px 6px;
+  border-bottom: 1px solid grey;
+}
+
+.upperHeader .contact {
+  font-family: "Titillium Web", sans-serif;
+  color: #707b8e;
+}
+
+.upperHeader .logmod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.upperHeader .logmod .loginRegister a {
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+  margin: 0px 110px;
+  padding: 0 5px;
+  color: #707b8e;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.upperHeader .logmod .loginRegister a:hover {
+  background-color: whitesmoke;
+  color: orangered;
+}
+
+.upperHeader .logmod .mode {
+  position: relative;
+  top: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 10px;
+  width: 40px;
+  height: 18px;
+  border: 1px solid #707b8e;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.upperHeader .logmod .mode .circle {
+  position: relative;
+  background-color: lightgray;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  padding: 0px;
+  margin: 0px 3px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.upperHeader .logmod .mode .circleActive {
+  left: 18px;
+  background-color: #707b8e;
+}
+
+@media screen and (max-width: 700px) {
+  .upperHeader {
+    height: 35px;
+    padding: 0px;
+  }
+  .upperHeader .logmod .loginRegister a {
+    margin: 0px;
+    padding: 0;
+  }
+}
+
+.lowerHeader {
+  z-index: 1;
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  padding: 12px;
+}
+
+.lowerHeader .logo img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.lowerHeader .searchArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid orangered;
+  border-radius: 45px;
+  width: 75%;
+}
+
+.lowerHeader .searchArea input {
+  width: 100%;
+  font-size: 20px;
+  padding: 7px 15px;
+  outline: none;
+  border-radius: 45px 0px 0px 45px;
+  border: none;
+}
+
+.lowerHeader .searchArea .searchIcon {
+  font-size: 41px;
+  padding: 2px 22px 2px 22px;
+  background-color: orangered;
+  color: white;
+  border-radius: 0px 22px 21px 0px;
+  cursor: pointer;
+}
+
+.lowerHeader .cart {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 50px;
+}
+
+.lowerHeader .cart .searchIconForMobile {
+  display: none;
+}
+
+.lowerHeader .cart a {
+  font-family: "Titillium Web", sans-serif;
+  color: #707b8e;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.lowerHeader .cart .carticon {
+  color: #707b8e;
+  font-size: 30px;
+}
+
+.lowerHeader .cart .cartCounter {
+  position: absolute;
+  font-size: 17px;
+  background-color: orangered;
+  top: -15px;
+  left: -19px;
+  color: white;
+  padding: 2px;
+  border-radius: 50%;
+  height: 23px;
+  width: 18px;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .lowerHeader {
+    margin: 5px 0px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: black;
+    padding: 12px 10px;
+  }
+  .lowerHeader .logo img {
+    height: 28px;
+    margin: 0;
+  }
+  .lowerHeader .searchArea {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    top: 90px;
+    left: -1px;
+    width: 99%;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .lowerHeader .searchArea input {
+    width: 100%;
+    font-size: 15px;
+    padding: 7px 12px;
+    outline: none;
+    border-radius: 45px 0px 0px 45px;
+    border: none;
+  }
+  .lowerHeader .searchArea .searchIcon {
+    font-size: 28px;
+    padding: 2px 10px 2px 10px;
+    background-color: orangered;
+    color: white;
+    border-radius: 0px 22px 21px 0px;
+    cursor: pointer;
+  }
+  .lowerHeader .showsearcharea {
+    visibility: visible;
+    top: 100px;
+    opacity: 1;
+  }
+  .lowerHeader .cart {
+    margin: 0px 18px;
+  }
+  .lowerHeader .cart .searchIconForMobile {
+    position: relative;
+    top: -1px;
+    right: 20px;
+    display: block;
+    font-size: 32px;
+    color: grey;
+    font-weight: 800;
+    margin-right: 5px;
+  }
+  .lowerHeader .cart a {
+    font-family: "Titillium Web", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .lowerHeader .cart .carticon {
+    color: white;
+    font-size: 25px;
+  }
+  .lowerHeader .cart .cartCounter {
+    top: -8px;
+    left: 18px;
+    padding: 2px;
+    border-radius: 50%;
+    height: 19px;
+    width: 18px;
+    text-align: center;
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=header.css.map */

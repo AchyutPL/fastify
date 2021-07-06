@@ -1,0 +1,223 @@
+.upperHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0px 25px;
+  margin: 0px 6px;
+  border-bottom: 1px solid grey;
+  .contact {
+    font-family: "Titillium Web", sans-serif;
+    color: #707b8e;
+  }
+  .logmod {
+    display: flex;
+    .loginRegister {
+      a {
+        font-family: "Titillium Web", sans-serif;
+        text-decoration: none;
+        margin: 0px 110px;
+        padding: 0 5px;
+        color: #707b8e;
+        transition: all 0.5s ease;
+        &:hover {
+          background-color: whitesmoke;
+          color: orangered;
+        }
+      }
+    }
+    .mode {
+      position: relative;
+      top: 2px;
+      display: flex;
+      align-items: center;
+      margin: 0px 10px;
+      width: 40px;
+      height: 18px;
+      border: 1px solid #707b8e;
+      cursor: pointer;
+      border-radius: 10px;
+      .circle {
+        position: relative;
+        background-color: lightgray;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        padding: 0px;
+        margin: 0px 3px;
+        transition: all 0.3s ease;
+      }
+      .circleActive {
+        left: 18px;
+        background-color: #707b8e;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .upperHeader {
+    height: 35px;
+    padding: 0px;
+    .logmod {
+      .loginRegister {
+        a {
+          margin: 0px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+.lowerHeader {
+  z-index: 1;
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 12px;
+  .logo {
+    img {
+      height: 50px;
+      margin-right: 20px;
+    }
+  }
+  .searchArea {
+    display: flex;
+    border: 1px solid orangered;
+    border-radius: 45px;
+    width: 75%;
+
+    input {
+      width: 100%;
+      font-size: 20px;
+      padding: 7px 15px;
+      outline: none;
+      border-radius: 45px 0px 0px 45px;
+      border: none;
+    }
+    .searchIcon {
+      font-size: 41px;
+      padding: 2px 22px 2px 22px;
+      background-color: orangered;
+      color: white;
+      border-radius: 0px 22px 21px 0px;
+      cursor: pointer;
+    }
+  }
+  .cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 50px;
+    .searchIconForMobile {
+      display: none;
+    }
+    a {
+      font-family: "Titillium Web", sans-serif;
+      color: #707b8e;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .carticon {
+      color: #707b8e;
+      font-size: 30px;
+    }
+    .cartCounter {
+      position: absolute;
+      font-size: 17px;
+      background-color: orangered;
+      top: -15px;
+      left: -19px;
+      color: white;
+      padding: 2px;
+      border-radius: 50%;
+      height: 23px;
+      width: 18px;
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .lowerHeader {
+    margin: 5px 0px;
+    justify-content: space-between;
+    background-color: black;
+    padding: 12px 10px;
+
+    .logo {
+      img {
+        height: 28px;
+        margin: 0;
+      }
+    }
+    .searchArea {
+      margin: 0;
+      display: flex;
+      visibility: hidden;
+      position: absolute;
+      top: 90px;
+      left: -1px;
+      width: 99%;
+      opacity: 0;
+      transition: all 0.2s ease;
+
+      input {
+        width: 100%;
+        font-size: 15px;
+        padding: 7px 12px;
+        outline: none;
+        border-radius: 45px 0px 0px 45px;
+        border: none;
+      }
+      .searchIcon {
+        font-size: 28px;
+        padding: 2px 10px 2px 10px;
+        background-color: orangered;
+        color: white;
+        border-radius: 0px 22px 21px 0px;
+        cursor: pointer;
+      }
+    }
+    .showsearcharea {
+      visibility: visible;
+      top: 100px;
+      opacity: 1;
+    }
+    .cart {
+      margin: 0px 18px;
+      .searchIconForMobile {
+        position: relative;
+        top: -1px;
+        right: 20px;
+        display: block;
+        font-size: 32px;
+        color: grey;
+        font-weight: 800;
+        margin-right: 5px;
+      }
+      a {
+        font-family: "Titillium Web", sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+      }
+      .carticon {
+        color: white;
+        font-size: 25px;
+      }
+      .cartCounter {
+        top: -8px;
+        left: 18px;
+        padding: 2px;
+        border-radius: 50%;
+        height: 19px;
+        width: 18px;
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+  }
+}

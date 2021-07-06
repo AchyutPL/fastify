@@ -1,0 +1,145 @@
+.category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0px;
+  padding: 15px 45px;
+  background-color: black;
+}
+
+.category .leftCategory {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.category .leftCategory .shopByCategory p {
+  color: white;
+  margin: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.category .leftCategory .shopByCategory p:hover {
+  color: red;
+}
+
+.category div > div > a {
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Titillium Web", sans-serif;
+  color: white;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.category div > div > a:hover {
+  color: red;
+}
+
+.category div > div:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.category .rightCategory a {
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Titillium Web", sans-serif;
+  color: white;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.category .rightCategory a:hover {
+  color: red;
+}
+
+.category .rightCategory:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.shopByCategory_Content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 25px;
+  position: absolute;
+  margin: -12px 5px;
+  width: 70%;
+  z-index: 1;
+  height: 300px;
+  background-color: #cfcfcf;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.shopByCategory_Content div > li {
+  list-style: none;
+  margin: 10px 0px;
+}
+
+.shopByCategory_Content div > li > a {
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Titillium Web", sans-serif;
+  color: #080000;
+}
+
+.shopByCategory_Content div > li > a:hover {
+  color: red;
+}
+
+.shopByCategory_Content div > a {
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Titillium Web", sans-serif;
+  color: #080000;
+  font-weight: 600;
+}
+
+.shopByCategory_Content div > a:hover {
+  color: red;
+}
+
+.categoryContentVisible {
+  visibility: visible;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .category {
+    display: none;
+    margin: 0px;
+    padding: 12px;
+  }
+  .category .leftCategory {
+    width: 100%;
+  }
+  .category .leftCategory .featured {
+    display: none;
+  }
+  .category .leftCategory .topSelling {
+    display: none;
+  }
+  .categoryContentVisible {
+    visibility: hidden;
+  }
+}
+/*# sourceMappingURL=category.css.map */

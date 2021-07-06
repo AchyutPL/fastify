@@ -1,0 +1,14 @@
+.switchTitles {
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+}
+.switchTitles h3 a {
+  color: white;
+  text-decoration: none;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.switchTitles h3 a:hover {
+  color: red;
+}
