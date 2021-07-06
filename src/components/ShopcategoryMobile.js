@@ -8,11 +8,13 @@ export default function ShopcategoryMobile() {
     const shopByCategoryMob = document.querySelector(".shopByCategoryMob");
     shopByCategoryMob.classList.remove("hideBar");
     shopByCategoryMob.classList.toggle("showBar");
+    document.body.style.overflow = "hidden";
   };
   const hideSideBar = () => {
     const shopByCategoryMob = document.querySelector(".shopByCategoryMob");
     shopByCategoryMob.classList.toggle("hideBar");
     shopByCategoryMob.classList.remove("showBar");
+    document.body.style.overflow = "auto";
   };
   const hideContent_Plus1 = () => {
     const ulList1 = document.querySelector(".ulList1");
