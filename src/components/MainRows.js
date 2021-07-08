@@ -1,9 +1,10 @@
 import React from "react";
-import data from "../data";
+// import data from "../data";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import RowMainSlider from "./RowMainSlider";
-export default function MainRows() {
+
+export default function MainRows({ ourdata }) {
   const [sliderRef1] = useKeenSlider({
     slidesPerView: 5,
     mode: "free",
@@ -24,6 +25,7 @@ export default function MainRows() {
       },
     },
   });
+
   return (
     <>
       <h2
@@ -38,8 +40,8 @@ export default function MainRows() {
         Featured Products
       </h2>
       <div ref={sliderRef1} className='keen-slider'>
-        {data.bags.map((bag) => (
-          <div className='keen-slider__slide number-slide'>
+        {ourdata.bags.map((bag) => (
+          <div key={bag._id} className='keen-slider__slide'>
             <RowMainSlider product={bag} />
           </div>
         ))}
@@ -59,8 +61,8 @@ export default function MainRows() {
         New Arrivals
       </h2>
       <div ref={sliderRef2} className='keen-slider'>
-        {data.mobiles.map((mobile) => (
-          <div className='keen-slider__slide number-slide'>
+        {ourdata.mobiles.map((mobile) => (
+          <div key={mobile._id} className='keen-slider__slide'>
             <RowMainSlider product={mobile} />
           </div>
         ))}

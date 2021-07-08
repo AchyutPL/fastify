@@ -2,7 +2,7 @@ import React from "react";
 import "../cssfiles/header/header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-
+import { Link } from "react-router-dom";
 export default function Header({ changemode }) {
   const showSearchArea = () => {
     const searcharea = document.querySelector(".searchArea");
@@ -23,9 +23,9 @@ export default function Header({ changemode }) {
       </div>
       <div className='lowerHeader'>
         <div className='logo'>
-          <a href='/'>
+          <Link to='/'>
             <img src='/logo.png' alt='name' />
-          </a>
+          </Link>
         </div>
         <div className='searchArea'>
           <input type='search' name='' id='' placeholder='Search here...' />

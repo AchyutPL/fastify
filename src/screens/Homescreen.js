@@ -1,21 +1,36 @@
-import React from "react";
-import Header from "../components/Header";
+import React, { useEffect } from "react";
 import Category from "../components/Category";
 import ShopcategoryMobile from "../components/ShopcategoryMobile";
 import MainnSlider from "../components/MainSlider";
 import MainRows from "../components/MainRows";
 import SwitchSlider from "../components/Switchslider/SwitchSlider";
-import Footer from "../components/Footer";
-export default function Homescreen({ changemode }) {
+import Loading from "../components/Loading";
+import Error from "../components/Error";
+import { useDispatch, useSelector } from "react-redux";
+import { rowdatas } from "../components/redux/actions/actions";
+
+export default function Homescreen() {
+  const dispatch = useDispatch();
+  const ourData = useSelector((state) => state.rowData);
+  const { ourdata, loading, error } = ourData;
+  useEffect(() => {
+    dispatch(rowdatas());
+  }, [dispatch]);
   return (
     <>
-      <Header changemode={changemode} />
-      <Category />
-      <ShopcategoryMobile />
-      <MainnSlider />
-      <MainRows />
-      <SwitchSlider />
-      <Footer />
+      {loading ? (
+        <Loading />
+      ) : error ? (
+        <Error />
+      ) : (
+        <>
+          <Category />
+          <ShopcategoryMobile />
+          <MainnSlider />
+          <MainRows ourdata={ourdata} />
+          <SwitchSlider ourdata={ourdata} />
+        </>
+      )}
     </>
   );
 }
