@@ -1,20 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Laptops from "./Laptops";
 import Fashion from "./Fashion";
 import "../../cssfiles/switchslider/switchslider.css";
 
 export default function SwitchSlider({ ourdata }) {
+  const [display, setdisplay] = useState("first");
   const toggleList1 = () => {
-    let toggle1 = document.querySelector(".toggle1");
-    let toggle2 = document.querySelector(".toggle2");
-    toggle2.style.display = "none";
-    toggle1.style.display = "block";
+    setdisplay("first");
   };
   const toggleList2 = () => {
-    let toggle1 = document.querySelector(".toggle1");
-    let toggle2 = document.querySelector(".toggle2");
-    toggle2.style.display = "block";
-    toggle1.style.display = "none";
+    setdisplay("second");
   };
   return (
     <div>
@@ -26,12 +21,13 @@ export default function SwitchSlider({ ourdata }) {
           Fashion Wear
         </h3>
       </div>
-      <div className='toggle1'>
+      {display === "first" ? (
         <Laptops data={ourdata.laptops} />
-      </div>
-      <div className='toggle2'>
+      ) : display === "second" ? (
         <Fashion data={ourdata.clothes} />
-      </div>
+      ) : (
+        <Laptops data={ourdata.laptops} />
+      )}
     </div>
   );
 }

@@ -9,14 +9,14 @@ export default function Loading() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "300px",
+        height: "400px",
       }}
     >
       <Loader
         type='Ball-Triangle'
         color='red'
-        height={70}
-        width={70}
+        height={40}
+        width={40}
         timeout={5000}
       />
     </div>
