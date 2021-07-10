@@ -1,0 +1,70 @@
+.cartSub h2 {
+  text-align: center;
+}
+
+.cartSub .cartItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid red;
+  padding: 10px 30px;
+  border-radius: 15px;
+  margin: 25px auto;
+}
+
+.cartSub .cartItems img {
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cartSub .cartItems p {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 18px;
+  color: red;
+  font-weight: 600;
+}
+
+.cartSub .cartItems div button {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .cartSub .cartItems {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 92%;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+  }
+  .cartSub .cartItems img {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border-radius: 12px;
+  }
+  .cartSub .cartItems p {
+    margin: 5px 0px 3px 5px;
+    font-size: 14px;
+  }
+  .cartSub .cartItems div button {
+    font-size: 12px;
+    padding: 2px 7px;
+  }
+}
+/*# sourceMappingURL=cartscreen.css.map */

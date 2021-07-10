@@ -3,7 +3,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Productscreen from "./screens/Productscreen";
-
+import Cartscreen from "./screens/Cartscreen";
+import ShopcategoryMobile from "./components/ShopcategoryMobile";
+import Category from "./components/Category";
+import Productgroupscreen from "./screens/Productgroupscreen";
+import NewsandCompany from "./screens/NewsandCompany";
+import SigninScreen from "./screens/SigninScreen";
+import Registerscreen from "./screens/Registerscreen";
+import ShippingScreen from "./screens/ShippingScreen";
+import Paymentscreen from "./screens/Paymentscreen";
+import Placeorderscreen from "./screens/Placeorderscreen";
 function App() {
   const changemode = () => {
     const circle = document.querySelector(".circle");
@@ -16,11 +25,48 @@ function App() {
       <Router>
         <div className='App'>
           <Header changemode={changemode} />
+          <Category />
+          <ShopcategoryMobile />
           <Switch>
             <Route exact path='/'>
               <Homescreen />
             </Route>
             <Route path='/detail/:id' component={Productscreen} />
+            <Route path='/cart/:id?' component={Cartscreen} />
+            <Route
+              path='/featuredproducts'
+              component={() => (
+                <Productgroupscreen title={`Featured Products`} />
+              )}
+            />
+            <Route
+              path='/topselling'
+              component={() => (
+                <Productgroupscreen title={`Top Selling Products`} />
+              )}
+            />
+            <Route
+              path='/mobiles'
+              component={() => <Productgroupscreen title={`Mobiles`} />}
+            />
+            <Route
+              path='/mensfashion'
+              component={() => <Productgroupscreen title={`Men's Fashion`} />}
+            />
+            <Route
+              path='/womenfashion'
+              component={() => <Productgroupscreen title={`Women's Fashion`} />}
+            />
+            <Route
+              path='/computers'
+              component={() => <Productgroupscreen title={`Computers`} />}
+            />
+            <Route path='/news' component={() => <NewsandCompany />} />
+            <Route path='/signin' component={() => <SigninScreen />} />
+            <Route path='/register' component={() => <Registerscreen />} />
+            <Route path='/shipping' component={() => <ShippingScreen />} />
+            <Route path='/payment' component={() => <Paymentscreen />} />
+            <Route path='/placeorder' component={() => <Placeorderscreen />} />
           </Switch>
           <Footer />
         </div>

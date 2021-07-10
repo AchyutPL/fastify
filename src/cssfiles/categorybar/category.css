@@ -116,6 +116,10 @@
   color: red;
 }
 
+.shopByCategory_Content .cross {
+  cursor: pointer;
+}
+
 .categoryContentVisible {
   visibility: visible;
   -webkit-transition: opacity 0.2s ease;

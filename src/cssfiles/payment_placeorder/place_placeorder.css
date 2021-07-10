@@ -1,0 +1,156 @@
+.paymentform {
+  width: 40%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.paymentform h1 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.paymentform input {
+  padding: 10px;
+  margin: 5px;
+}
+
+.paymentform label {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0px;
+}
+
+.paymentform button {
+  width: 100%;
+  padding: 10px 0px;
+  margin: 39px 0px;
+  background-color: red;
+  outline: none;
+  border: 1px solid grey;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.paymentform button:hover {
+  background-color: whitesmoke;
+  color: red;
+}
+
+@media screen and (max-width: 700px) {
+  .paymentform {
+    width: 90%;
+  }
+}
+
+.placeorder {
+  margin: auto;
+  width: 60%;
+}
+
+.placeorder form h2,
+.placeorder form h3 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.placeorder form .shipping {
+  padding: 20px;
+  margin: 25px 0px;
+  border: 2px solid orangered;
+  border-radius: 10px;
+}
+
+.placeorder form .method {
+  padding: 20px;
+  margin: 5px 0px;
+  border: 2px solid orangered;
+  border-radius: 10px;
+}
+
+.placeorder form button {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  margin: 15px 0px 10px 0px;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid grey;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.placeorder form button:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.placeorder form .cartcontainer.cartcontainershipping {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid orangered;
+  border-radius: 10px;
+  width: 100%;
+  height: 120px;
+  margin-top: 25px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 10px;
+}
+
+.placeorder form .cartcontainer.cartcontainershipping img {
+  height: 80px;
+  margin-left: 50px;
+}
+
+.placeorder form .cartcontainer.cartcontainershipping .cartname {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.placeorder form .cartcontainer.cartcontainershipping .cartprice {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 700px) {
+  .placeorder {
+    width: 90%;
+  }
+  .placeorder form .cartcontainer.cartcontainershipping img {
+    height: 60px;
+    margin: 5px;
+  }
+  .placeorder form .cartcontainer.cartcontainershipping .cartname {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .placeorder form .cartcontainer.cartcontainershipping .cartprice {
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+/*# sourceMappingURL=place_placeorder.css.map */

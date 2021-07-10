@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import Category from "../components/Category";
-import ShopcategoryMobile from "../components/ShopcategoryMobile";
+
 import MainnSlider from "../components/MainSlider";
 import MainRows from "../components/MainRows";
 import SwitchSlider from "../components/Switchslider/SwitchSlider";
@@ -24,8 +23,6 @@ export default function Homescreen() {
         <Error />
       ) : (
         <>
-          <Category />
-          <ShopcategoryMobile />
           <MainnSlider />
           <MainRows ourdata={ourdata} />
           <SwitchSlider ourdata={ourdata} />

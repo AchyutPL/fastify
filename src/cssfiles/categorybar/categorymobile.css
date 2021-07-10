@@ -42,6 +42,10 @@
     text-decoration: none;
     font-family: "Titillium Web", sans-serif;
   }
+  div > h3 a {
+    text-decoration: none;
+    color: red;
+  }
   .menu {
     display: flex;
     align-items: center;

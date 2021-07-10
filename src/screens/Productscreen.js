@@ -3,18 +3,36 @@ import "../cssfiles/productscreen/productscreen.css";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useDispatch, useSelector } from "react-redux";
-import { productscreendata } from "../components/redux/actions/actions";
+import { buynow, productscreendata } from "../components/redux/actions/actions";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
-
+import { useHistory } from "react-router";
+import HomeIcon from "@material-ui/icons/Home";
 export default function Productscreen(props) {
   const productId = props.match.params.id;
   const screenData = useSelector((state) => state.screenData);
   const { product, loading, error } = screenData;
+
+  const user = useSelector((state) => state.user);
+  const { fastifyuser } = user;
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(productscreendata(productId));
   }, [dispatch, productId]);
+  const history = useHistory();
+  const qty = 1;
+  const addToCartHandler = () => {
+    history.push(`/cart/${productId}?qty=${qty}`);
+  };
+  const buyNowHandler = () => {
+    if (fastifyuser) {
+      dispatch(buynow(productId));
+      history.push("/shipping");
+    } else {
+      history.push("/signin");
+    }
+  };
 
   return (
     <>
@@ -26,6 +44,9 @@ export default function Productscreen(props) {
         <>
           <div className='productScreen'>
             <p>
+              <HomeIcon
+                style={{ position: "relative", top: "5px", color: "red" }}
+              />
               Home {">"} {product.category} {">"} {product.productname}
             </p>
             <div className='mainProductSection'>
@@ -50,11 +71,11 @@ export default function Productscreen(props) {
                   </select>
                 </div>
                 <div className='buttons'>
-                  <button className='addToCart'>
+                  <button className='addToCart' onClick={addToCartHandler}>
                     <AddShoppingCartIcon style={{ margin: "-1px 5px" }} /> Add
                     To Cart
                   </button>
-                  <button className='buyNow'>
+                  <button className='buyNow' onClick={buyNowHandler}>
                     <ShoppingBasketIcon style={{ margin: "-1px 5px" }} />
                     Buy Now
                   </button>

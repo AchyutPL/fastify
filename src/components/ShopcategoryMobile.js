@@ -3,6 +3,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import "../cssfiles/categorybar/categorymobile.css";
 import MenuIcon from "@material-ui/icons/Menu";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import { Link } from "react-router-dom";
 export default function ShopcategoryMobile() {
   const showSlideBar = () => {
     const shopByCategoryMob = document.querySelector(".shopByCategoryMob");
@@ -46,7 +47,7 @@ export default function ShopcategoryMobile() {
           </div>
         </div>
         <div className='rightmobcat'>
-          <a href='/'>News</a>
+          <Link to='/news'>News</Link>
         </div>
       </div>
       <div className='shopByCategoryMob'>
@@ -56,69 +57,79 @@ export default function ShopcategoryMobile() {
         </div>
         <div className='mobileContent'>
           <div>
-            <h3>Mobiles</h3>
+            <h3>
+              <Link to='/mobiles'> Mobiles</Link>
+            </h3>
             <AddCircleOutlineIcon onClick={hideContent_Plus1} />
           </div>
           <ul className='ulList1'>
             <li>
-              <a href='/'> Apple </a>
+              <Link to='/'> Apple </Link>
             </li>
             <li>
-              <a href='/'> Samsung </a>
+              <Link to='/mobiles'> Samsung </Link>
             </li>
             <li>
-              <a href='/'> Huwaei </a>
+              <Link to='/mobiles'> Huwaei </Link>
             </li>
             <li>
-              <a href='/'> Oppo </a>
+              <Link to='/mobiles'> Oppo </Link>
             </li>
             <li>
-              <a href='/'> Vivo </a>
+              <Link to='/mobiles'> Vivo </Link>
             </li>
           </ul>
         </div>
         <div className='menFashion'>
           <div>
-            <h3> Men's Fashion</h3>
+            <h3>
+              <Link to='/mensfashion'> Men's Fashion</Link>
+            </h3>
             <AddCircleOutlineIcon onClick={hideContent_Plus2} />
           </div>
           <ul className='ulList2'>
             <li>
-              <a href='/'> Gucchi </a>
+              <Link to='/mobiles'> Gucchi </Link>
             </li>
             <li>
-              <a href='/'> Watches </a>
+              <Link to='/mobiles'> Watches </Link>
             </li>
           </ul>
         </div>
         <div className='womenFashion'>
           <div>
-            <h3> Womens's Fashion</h3>
+            <h3>
+              {" "}
+              <Link to='/womenfashion'> Women's Fashion</Link>
+            </h3>
             <AddCircleOutlineIcon onClick={hideContent_Plus3} />
           </div>
           <ul className='ulList3'>
             <li>
-              <a href='/'> Gucchi </a>
+              <Link to='/mobiles'> Gucchi </Link>
             </li>
             <li>
-              <a href='/'> Onepiece </a>
+              <Link to='/mobiles'> Onepiece </Link>
             </li>
           </ul>
         </div>
         <div className='computer'>
           <div>
-            <h3> Computers and Laptops</h3>
+            <h3>
+              {" "}
+              <Link to='/computers'> Computer and Laptops</Link>
+            </h3>
             <AddCircleOutlineIcon onClick={hideContent_Plus4} />
           </div>
           <ul className='ulList4'>
             <li>
-              <a href='/'> Asus </a>
+              <Link to='/mobiles'> Asus </Link>
             </li>
             <li>
-              <a href='/'> Msi </a>
+              <Link to='/mobiles'> Msi </Link>
             </li>
             <li>
-              <a href='/'> Acer </a>
+              <Link to='/mobiles'> Acer </Link>
             </li>
           </ul>
         </div>

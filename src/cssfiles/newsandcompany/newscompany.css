@@ -1,0 +1,19 @@
+.news {
+  height: 50vh;
+}
+
+.news h2 {
+  font-family: "Titillium Web", sans-serif;
+  text-align: center;
+  font-size: 23px;
+  color: red;
+}
+
+.news p {
+  font-family: "Titillium Web", sans-serif;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  color: red;
+}
+/*# sourceMappingURL=newscompany.css.map */

@@ -1,0 +1,65 @@
+.cartSub {
+  h2 {
+    text-align: center;
+  }
+  .cartItems {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+    border: 1px solid red;
+    padding: 10px 30px;
+    border-radius: 15px;
+    margin: 25px auto;
+    img {
+      height: 100px;
+      object-fit: cover;
+    }
+    p {
+      font-family: "Titillium Web", sans-serif;
+      font-size: 18px;
+      color: red;
+      font-weight: 600;
+    }
+    div {
+      button {
+        cursor: pointer;
+        background-color: red;
+        color: white;
+        outline: none;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 5px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .cartSub {
+    .cartItems {
+      align-items: center;
+      width: 92%;
+      padding: 5px 10px;
+      border-radius: 15px;
+      background-color: whitesmoke;
+
+      img {
+        width: 70px;
+        height: 70px;
+        margin: 5px;
+        border-radius: 12px;
+      }
+      p {
+        margin: 5px 0px 3px 5px;
+        font-size: 14px;
+      }
+      div {
+        button {
+          font-size: 12px;
+
+          padding: 2px 7px;
+        }
+      }
+    }
+  }
+}

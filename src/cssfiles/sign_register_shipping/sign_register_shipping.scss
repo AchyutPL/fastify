@@ -1,0 +1,179 @@
+.signincontainer {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 25px;
+  width: 60%;
+  margin: auto;
+  text-align: start;
+  h2 {
+    font-family: "Titillium Web", sans-serif;
+  }
+  .signinform {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    label {
+      font-family: "Titillium Web", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 0px;
+    }
+    input {
+      width: 94.4%;
+      padding: 10px;
+      outline: none;
+      font-size: 18px;
+      border: 1px solid red;
+    }
+    button {
+      width: 97%;
+      padding: 8px 0px;
+      margin: 39px 0px;
+      background-color: red;
+      color: white;
+      outline: none;
+      border: 1px solid grey;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 17px;
+      font-family: "Titillium Web", sans-serif;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: whitesmoke;
+        color: red;
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .signincontainer {
+    width: 90%;
+    .signinform {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+.registercontainer {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 25px;
+  width: 60%;
+  margin: auto;
+  text-align: start;
+  h2 {
+    font-family: "Titillium Web", sans-serif;
+  }
+  .signinform {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    label {
+      font-family: "Titillium Web", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 0px;
+    }
+    input {
+      width: 94.4%;
+      padding: 10px;
+      outline: none;
+      font-size: 18px;
+      border: 1px solid red;
+    }
+    button {
+      width: 97%;
+      padding: 8px 0px;
+      margin: 39px 0px;
+      background-color: red;
+      color: white;
+      outline: none;
+      border: 1px solid grey;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 17px;
+      font-family: "Titillium Web", sans-serif;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: whitesmoke;
+        color: red;
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .registercontainer {
+    width: 90%;
+    .signinform {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+.shippingcontainer {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 25px;
+  width: 60%;
+  margin: auto;
+  text-align: start;
+  h2 {
+    font-family: "Titillium Web", sans-serif;
+  }
+  .signinform {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    label {
+      font-family: "Titillium Web", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 0px;
+    }
+    input {
+      width: 94.4%;
+      padding: 10px;
+      outline: none;
+      font-size: 18px;
+      border: 1px solid red;
+    }
+    select {
+      height: 42px;
+      font-size: 18px;
+      padding: 0px;
+      outline: none;
+      border: 1px solid red;
+      width: 97.2%;
+    }
+    button {
+      width: 97%;
+      padding: 8px 0px;
+      margin: 39px 0px;
+      background-color: red;
+      color: white;
+      outline: none;
+      border: 1px solid grey;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 17px;
+      font-family: "Titillium Web", sans-serif;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: whitesmoke;
+        color: red;
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .shippingcontainer {
+    width: 90%;
+    .signinform {
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

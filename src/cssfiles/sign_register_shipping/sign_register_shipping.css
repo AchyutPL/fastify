@@ -1,0 +1,222 @@
+.signincontainer {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 25px;
+  width: 60%;
+  margin: auto;
+  text-align: start;
+}
+
+.signincontainer h2 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.signincontainer .signinform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.signincontainer .signinform label {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0px;
+}
+
+.signincontainer .signinform input {
+  width: 94.4%;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid red;
+}
+
+.signincontainer .signinform button {
+  width: 97%;
+  padding: 8px 0px;
+  margin: 39px 0px;
+  background-color: red;
+  color: white;
+  outline: none;
+  border: 1px solid grey;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  font-family: "Titillium Web", sans-serif;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.signincontainer .signinform button:hover {
+  background-color: whitesmoke;
+  color: red;
+}
+
+@media screen and (max-width: 700px) {
+  .signincontainer {
+    width: 90%;
+  }
+  .signincontainer .signinform button {
+    width: 100%;
+  }
+}
+
+.registercontainer {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 25px;
+  width: 60%;
+  margin: auto;
+  text-align: start;
+}
+
+.registercontainer h2 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.registercontainer .signinform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registercontainer .signinform label {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0px;
+}
+
+.registercontainer .signinform input {
+  width: 94.4%;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid red;
+}
+
+.registercontainer .signinform button {
+  width: 97%;
+  padding: 8px 0px;
+  margin: 39px 0px;
+  background-color: red;
+  color: white;
+  outline: none;
+  border: 1px solid grey;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  font-family: "Titillium Web", sans-serif;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.registercontainer .signinform button:hover {
+  background-color: whitesmoke;
+  color: red;
+}
+
+@media screen and (max-width: 700px) {
+  .registercontainer {
+    width: 90%;
+  }
+  .registercontainer .signinform button {
+    width: 100%;
+  }
+}
+
+.shippingcontainer {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 25px;
+  width: 60%;
+  margin: auto;
+  text-align: start;
+}
+
+.shippingcontainer h2 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.shippingcontainer .signinform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shippingcontainer .signinform label {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0px;
+}
+
+.shippingcontainer .signinform input {
+  width: 94.4%;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid red;
+}
+
+.shippingcontainer .signinform select {
+  height: 42px;
+  font-size: 18px;
+  padding: 0px;
+  outline: none;
+  border: 1px solid red;
+  width: 97.2%;
+}
+
+.shippingcontainer .signinform button {
+  width: 97%;
+  padding: 8px 0px;
+  margin: 39px 0px;
+  background-color: red;
+  color: white;
+  outline: none;
+  border: 1px solid grey;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  font-family: "Titillium Web", sans-serif;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.shippingcontainer .signinform button:hover {
+  background-color: whitesmoke;
+  color: red;
+}
+
+@media screen and (max-width: 700px) {
+  .shippingcontainer {
+    width: 90%;
+  }
+  .shippingcontainer .signinform button {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=sign_register_shipping.css.map */

@@ -1,0 +1,131 @@
+.paymentform {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-family: "Titillium Web", sans-serif;
+  }
+  input {
+    padding: 10px;
+    margin: 5px;
+  }
+  label {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0px;
+  }
+  button {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 39px 0px;
+    background-color: red;
+    outline: none;
+    border: 1px solid grey;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: whitesmoke;
+      color: red;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .paymentform {
+    width: 90%;
+  }
+}
+
+.placeorder {
+  margin: auto;
+  width: 60%;
+  form {
+    h2,
+    h3 {
+      font-family: "Titillium Web", sans-serif;
+    }
+    .shipping {
+      padding: 20px;
+      margin: 25px 0px;
+      border: 2px solid orangered;
+      border-radius: 10px;
+    }
+    .method {
+      padding: 20px;
+      margin: 5px 0px;
+      border: 2px solid orangered;
+      border-radius: 10px;
+    }
+    button {
+      width: 100%;
+      margin: auto;
+      padding: 10px;
+      margin: 15px 0px 10px 0px;
+      font-family: "Titillium Web", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      border: 1px solid grey;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: orangered;
+        color: white;
+      }
+    }
+
+    .cartcontainer.cartcontainershipping {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 2px solid orangered;
+      border-radius: 10px;
+      width: 100%;
+      height: 120px;
+      margin-top: 25px;
+      box-shadow: none;
+      border-radius: 10px;
+      img {
+        height: 80px;
+        margin-left: 50px;
+      }
+      .cartname {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .cartprice {
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .placeorder {
+    width: 90%;
+    form {
+      .cartcontainer.cartcontainershipping {
+        img {
+          height: 60px;
+          margin: 5px;
+        }
+        .cartname {
+          font-size: 12px;
+          font-weight: 600;
+        }
+        .cartprice {
+          margin-right: 10px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

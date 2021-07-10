@@ -1,7 +1,8 @@
 import React from "react";
 import "../cssfiles/categorybar/category.css";
 import MenuIcon from "@material-ui/icons/Menu";
-
+import { Link } from "react-router-dom";
+import CancelIcon from "@material-ui/icons/Cancel";
 export default function Category() {
   const showCategoryContent = () => {
     const showCategoryContent = document.querySelector(
@@ -9,7 +10,12 @@ export default function Category() {
     );
     showCategoryContent.classList.toggle("categoryContentVisible");
   };
-
+  const crossFunction = () => {
+    let shopByCategory_Content = document.querySelector(
+      ".shopByCategory_Content"
+    );
+    shopByCategory_Content.classList.toggle("categoryContentVisible");
+  };
   return (
     <>
       <div className='category'>
@@ -19,66 +25,69 @@ export default function Category() {
             style={{ display: "flex", alignItems: "center" }}
             onClick={showCategoryContent}
           >
-            <MenuIcon style={{ color: "white", cursor: "pointer" }} />{" "}
+            <MenuIcon style={{ color: "white", cursor: "pointer" }} />
             <p>Shop By Category</p>
           </div>
           <div className='featured'>
-            <a href='/'>Featured Products</a>
+            <Link to='/featuredproducts'>Featured Products</Link>
           </div>
           <div className='topSelling'>
-            <a href='/'>Top Selling Products</a>
+            <Link to='/topselling'>Top Selling Products</Link>
           </div>
         </div>
         <div className='rightCategory'>
-          <a href='/'>News</a>
+          <Link to='/news'>News</Link>
         </div>
       </div>
 
       <div className='shopByCategory_Content'>
         <div>
-          <a href='/'>Mobiles</a>
+          <Link to='/mobiles'>Mobiles</Link>
           <li>
-            <a href='/'> Apple</a>
+            <Link to='/'> Apple</Link>
           </li>
           <li>
-            <a href='/'> Samsung</a>
+            <Link to='/'> Samsung</Link>
           </li>
           <li>
-            <a href='/'>Huwaei</a>
+            <Link to='/'>Huwaei</Link>
           </li>
           <li>
-            <a href='/'> Oppo</a>
+            <Link to='/'> Oppo</Link>
           </li>
           <li>
-            <a href='/'> Vivo</a>
-          </li>
-        </div>
-        <div>
-          <a href='/'>Men's Fashion</a>
-          <li>
-            <a href='/'>Gucchi</a>
+            <Link to='/'> Vivo</Link>
           </li>
         </div>
         <div>
-          <a href='/'>Women's Fashion</a>
+          <Link to='/mensfashion'>Men's Fashion</Link>
           <li>
-            <a href='/'>Gucchi</a>
-          </li>
-          <li>
-            <a href='/'>Onepiece</a>
+            <Link to='/'>Gucchi</Link>
           </li>
         </div>
         <div>
-          <a href='/'>Computer and Laptops</a>
+          <Link to='/womenfashion'>Women's Fashion</Link>
           <li>
-            <a href='/'>Asus</a>
+            <Link to='/'>Gucchi</Link>
           </li>
           <li>
-            <a href='/'>Msi</a>
+            <Link to='/'>Onepiece</Link>
+          </li>
+        </div>
+        <div>
+          <Link to='/computers'>Computer and Laptops</Link>
+          <li>
+            <Link to='/'>Asus</Link>
           </li>
           <li>
-            <a href='/'>Acer</a>
+            <Link to='/'>Msi</Link>
           </li>
+          <li>
+            <Link to='/'>Acer</Link>
+          </li>
+        </div>
+        <div className='cross' onClick={crossFunction}>
+          <CancelIcon style={{ color: "red" }} />
         </div>
       </div>
     </>
