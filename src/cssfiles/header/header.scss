@@ -58,7 +58,8 @@
 
 @media screen and (max-width: 700px) {
   .upperHeader {
-    height: 35px;
+    flex-direction: column;
+    height: 58px;
     padding: 0px;
     .logmod {
       .loginRegister {
