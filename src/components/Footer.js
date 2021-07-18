@@ -30,7 +30,7 @@ export default function Footer() {
         <div className='about'>
           <h3>About</h3>
           <h4>
-            <Link to='/news '> Company Info</Link>
+            <Link to='/news'> Company Info</Link>
           </h4>
         </div>
       </div>

@@ -25,6 +25,9 @@
           color: orangered;
         }
       }
+      .username {
+        color: #707b8e;
+      }
     }
     .mode {
       position: relative;
@@ -58,15 +61,33 @@
 
 @media screen and (max-width: 700px) {
   .upperHeader {
-    flex-direction: column;
-    height: 58px;
+    height: 45px;
     padding: 0px;
+    .contact {
+      margin: 0;
+      font-size: 12px;
+    }
     .logmod {
+      position: relative;
+      top: -5px;
       .loginRegister {
+        margin: 0px 15px;
         a {
           margin: 0px;
+          font-size: 12px;
           padding: 0;
         }
+        .username {
+          padding: 0px 8px 0px 0px;
+          font-size: 11px;
+        }
+        .loginformobileonly {
+          position: relative;
+          top: 4px;
+        }
+      }
+      .mode {
+        top: 8px;
       }
     }
   }
@@ -184,7 +205,7 @@
     }
     .showsearcharea {
       visibility: visible;
-      top: 100px;
+      top: 108px;
       opacity: 1;
     }
     .cart {

@@ -28,9 +28,13 @@ export default function Header({ changemode }) {
           <div className='loginRegister'>
             {fastifyuser ? (
               <>
-                <span>
+                <span className='username'>
                   <AccountCircleIcon
-                    style={{ position: "relative", top: "6px", color: "grey" }}
+                    style={{
+                      position: "relative",
+                      top: "6px",
+                      color: "grey",
+                    }}
                   />
                   {fastifyuser.fullname}
                 </span>
@@ -39,7 +43,9 @@ export default function Header({ changemode }) {
                 </a>
               </>
             ) : (
-              <Link to='/signin'>Login/Register</Link>
+              <Link to='/signin' className='loginformobileonly'>
+                Login/Register
+              </Link>
             )}
           </div>
 

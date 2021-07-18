@@ -40,6 +40,10 @@
   color: orangered;
 }
 
+.upperHeader .logmod .loginRegister .username {
+  color: #707b8e;
+}
+
 .upperHeader .logmod .mode {
   position: relative;
   top: 2px;
@@ -77,16 +81,35 @@
 
 @media screen and (max-width: 700px) {
   .upperHeader {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 58px;
+    height: 45px;
     padding: 0px;
+  }
+  .upperHeader .contact {
+    margin: 0;
+    font-size: 12px;
+  }
+  .upperHeader .logmod {
+    position: relative;
+    top: -5px;
+  }
+  .upperHeader .logmod .loginRegister {
+    margin: 0px 15px;
   }
   .upperHeader .logmod .loginRegister a {
     margin: 0px;
+    font-size: 12px;
     padding: 0;
+  }
+  .upperHeader .logmod .loginRegister .username {
+    padding: 0px 8px 0px 0px;
+    font-size: 11px;
+  }
+  .upperHeader .logmod .loginRegister .loginformobileonly {
+    position: relative;
+    top: 4px;
+  }
+  .upperHeader .logmod .mode {
+    top: 8px;
   }
 }
 
@@ -224,7 +247,7 @@
   }
   .lowerHeader .showsearcharea {
     visibility: visible;
-    top: 100px;
+    top: 108px;
     opacity: 1;
   }
   .lowerHeader .cart {
