@@ -216,12 +216,14 @@
     margin: 0;
   }
   .lowerHeader .searchArea {
+    border: 2.1px solid red;
     margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     visibility: hidden;
     position: absolute;
+    border-radius: 0px;
     top: 90px;
     left: -1px;
     width: 99%;
@@ -231,18 +233,18 @@
   }
   .lowerHeader .searchArea input {
     width: 100%;
-    font-size: 15px;
-    padding: 7px 12px;
+    font-size: 18px;
+    padding: 8px 12px;
     outline: none;
-    border-radius: 45px 0px 0px 45px;
+    border-radius: 0px;
     border: none;
   }
   .lowerHeader .searchArea .searchIcon {
     font-size: 28px;
-    padding: 2px 10px 2px 10px;
+    padding: 6.5px 20px 6px 20px;
     background-color: orangered;
     color: white;
-    border-radius: 0px 22px 21px 0px;
+    border-radius: 0px;
     cursor: pointer;
   }
   .lowerHeader .showsearcharea {

@@ -44,12 +44,12 @@ export default function Searchresultscreen(props) {
                   />
                 </Link>
               </div>
-              <div className='searchDataName'>
+              <div className='productName'>
                 <Link to={`/detail/${searchdatas._id}`}>
-                  <h3>{searchdatas.searchDataname}</h3>
+                  <h3>{searchdatas.productname}</h3>
                 </Link>
               </div>
-              <div className='price'>{searchdatas.price}</div>
+              <div className='price'>Rs.{searchdatas.price}</div>
               <div className='discount'> Rs.700</div>
             </div>
           ))}

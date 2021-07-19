@@ -28,6 +28,11 @@ export default function Header({ changemode }) {
     history.push(`/search/${searchterm}`);
     setsearchterm("");
   };
+  const dothis = (e) => {
+    if (e.key === "Enter") {
+      history.push(`/search/${searchterm}`);
+    }
+  };
   return (
     <>
       <div className='upperHeader'>
@@ -76,6 +81,7 @@ export default function Header({ changemode }) {
             placeholder='Search here...'
             value={searchterm}
             onChange={(e) => setsearchterm(e.target.value)}
+            onKeyDown={dothis}
           />
           <SearchIcon className='searchIcon' onClick={searchtheterm} />
         </div>
