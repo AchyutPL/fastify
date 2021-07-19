@@ -13,6 +13,7 @@ import Registerscreen from "./screens/Registerscreen";
 import ShippingScreen from "./screens/ShippingScreen";
 import Paymentscreen from "./screens/Paymentscreen";
 import Placeorderscreen from "./screens/Placeorderscreen";
+import Searchresultscreen from "./screens/Searchresultscreen";
 function App() {
   const changemode = () => {
     const circle = document.querySelector(".circle");
@@ -67,6 +68,7 @@ function App() {
             <Route path='/shipping' component={() => <ShippingScreen />} />
             <Route path='/payment' component={() => <Paymentscreen />} />
             <Route path='/placeorder' component={() => <Placeorderscreen />} />
+            <Route path='/search/:term' component={Searchresultscreen} />
           </Switch>
           <Footer />
         </div>

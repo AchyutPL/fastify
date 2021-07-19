@@ -1,0 +1,102 @@
+.searchScreenItems {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 20px 10px;
+}
+
+.searchScreenItems .sliderItems {
+  width: 210px;
+  height: 380px;
+  border-radius: 25px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+          box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  padding: 15px;
+}
+
+.searchScreenItems .sliderItems .image a img {
+  width: 100%;
+  height: 220px;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.searchScreenItems .sliderItems .image a img:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.searchScreenItems .productName a {
+  text-decoration: none;
+}
+
+.searchScreenItems .productName a h3 {
+  margin: 15px 0px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 500;
+  color: #707070;
+}
+
+.searchScreenItems .productName a h3:hover {
+  color: red;
+}
+
+.searchScreenItems .price {
+  color: #707070;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+}
+
+.searchScreenItems .discount {
+  text-decoration: line-through;
+  font-size: 17px;
+  color: grey;
+  padding: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .searchScreenItems {
+    margin: 10px 5px;
+    -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .searchScreenItems .sliderItems {
+    width: 140px;
+    height: 250px;
+    margin: 10px;
+  }
+  .searchScreenItems .sliderItems .image a img {
+    width: 100%;
+    height: 140px;
+    border-radius: 15px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  .searchScreenItems .sliderItems .image a img:hover {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  .searchScreenItems .productName a {
+    text-decoration: none;
+  }
+  .searchScreenItems .productName a h3 {
+    margin: 5px 0px;
+    font-size: 15px;
+  }
+  .searchScreenItems .price {
+    font-size: 16px;
+  }
+  .searchScreenItems .discount {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=searchscreen.css.map */

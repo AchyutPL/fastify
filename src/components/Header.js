@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../cssfiles/header/header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signout } from "./redux/actions/actions";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 export default function Header({ changemode }) {
+  const history = useHistory();
+  const [searchterm, setsearchterm] = useState("");
+
   const showSearchArea = () => {
     const searcharea = document.querySelector(".searchArea");
     searcharea.classList.toggle("showsearcharea");
@@ -19,6 +22,11 @@ export default function Header({ changemode }) {
 
   const signuserout = (e) => {
     dispatch(signout());
+  };
+
+  const searchtheterm = () => {
+    history.push(`/search/${searchterm}`);
+    setsearchterm("");
   };
   return (
     <>
@@ -61,8 +69,15 @@ export default function Header({ changemode }) {
           </Link>
         </div>
         <div className='searchArea'>
-          <input type='search' name='' id='' placeholder='Search here...' />
-          <SearchIcon className='searchIcon' />
+          <input
+            type='search'
+            name=''
+            id=''
+            placeholder='Search here...'
+            value={searchterm}
+            onChange={(e) => setsearchterm(e.target.value)}
+          />
+          <SearchIcon className='searchIcon' onClick={searchtheterm} />
         </div>
         <div className='cart'>
           <SearchIcon

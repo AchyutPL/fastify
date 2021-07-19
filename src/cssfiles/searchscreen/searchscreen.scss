@@ -1,0 +1,92 @@
+.searchScreenItems {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 20px 10px;
+  .sliderItems {
+    width: 210px;
+    height: 380px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    padding: 15px;
+    .image {
+      a {
+        img {
+          width: 100%;
+          height: 220px;
+          border-radius: 15px;
+          object-fit: cover;
+          transition: all 0.2s ease;
+          &:hover {
+            transform: scale(1.01);
+          }
+        }
+      }
+    }
+  }
+  .productName {
+    a {
+      text-decoration: none;
+      h3 {
+        margin: 15px 0px;
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 500;
+        color: rgb(112, 112, 112);
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+  .price {
+    color: rgb(112, 112, 112);
+    font-family: "Titillium Web", sans-serif;
+    font-size: 20px;
+  }
+  .discount {
+    text-decoration: line-through;
+    font-size: 17px;
+    color: grey;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .searchScreenItems {
+    margin: 10px 5px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .sliderItems {
+      width: 140px;
+      height: 250px;
+      margin: 10px;
+      .image {
+        a {
+          img {
+            width: 100%;
+            height: 140px;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: all 0.2s ease;
+            &:hover {
+              transform: scale(1.01);
+            }
+          }
+        }
+      }
+    }
+    .productName {
+      a {
+        text-decoration: none;
+        h3 {
+          margin: 5px 0px;
+          font-size: 15px;
+        }
+      }
+    }
+    .price {
+      font-size: 16px;
+    }
+    .discount {
+      font-size: 15px;
+    }
+  }
+}
