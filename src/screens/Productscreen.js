@@ -63,7 +63,7 @@ export default function Productscreen(props) {
                 </div>
                 <div className='price'>
                   <p>Rs.{product.price}</p>
-                  <span>Price : 60000</span>
+                  <span>Rs.:{product.discount}</span>
                 </div>
                 <div className='qty'>
                   <select name='' id=''>

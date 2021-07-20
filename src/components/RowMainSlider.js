@@ -15,8 +15,8 @@ export default function RowMainSlider({ product }) {
             <h3>{product.productname}</h3>
           </Link>
         </div>
-        <div className='price'>{product.price}</div>
-        <div className='discount'> Rs.700</div>
+        <div className='price'>Rs.{product.price}</div>
+        <div className='discount'> Rs.{product.discount}</div>
       </div>
     </div>
   );

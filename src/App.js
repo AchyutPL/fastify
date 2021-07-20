@@ -25,52 +25,63 @@ function App() {
     <>
       <Router>
         <div className='App'>
-          <Header changemode={changemode} />
-          <Category />
-          <ShopcategoryMobile />
-          <Switch>
-            <Route exact path='/'>
-              <Homescreen />
-            </Route>
-            <Route path='/detail/:id' component={Productscreen} />
-            <Route path='/cart/:id?' component={Cartscreen} />
-            <Route
-              path='/featuredproducts'
-              component={() => (
-                <Productgroupscreen title={`Featured Products`} />
-              )}
-            />
-            <Route
-              path='/topselling'
-              component={() => (
-                <Productgroupscreen title={`Top Selling Products`} />
-              )}
-            />
-            <Route
-              path='/mobiles'
-              component={() => <Productgroupscreen title={`Mobiles`} />}
-            />
-            <Route
-              path='/mensfashion'
-              component={() => <Productgroupscreen title={`Men's Fashion`} />}
-            />
-            <Route
-              path='/womenfashion'
-              component={() => <Productgroupscreen title={`Women's Fashion`} />}
-            />
-            <Route
-              path='/computers'
-              component={() => <Productgroupscreen title={`Computers`} />}
-            />
-            <Route path='/news' component={() => <NewsandCompany />} />
-            <Route path='/signin' component={() => <SigninScreen />} />
-            <Route path='/register' component={() => <Registerscreen />} />
-            <Route path='/shipping' component={() => <ShippingScreen />} />
-            <Route path='/payment' component={() => <Paymentscreen />} />
-            <Route path='/placeorder' component={() => <Placeorderscreen />} />
-            <Route path='/search/:term' component={Searchresultscreen} />
-          </Switch>
-          <Footer />
+          <div className='headSection'>
+            <Header changemode={changemode} />
+            <Category />
+            <ShopcategoryMobile />
+          </div>
+          <div className='occupy'>
+            <Switch>
+              <Route exact path='/'>
+                <Homescreen />
+              </Route>
+              <Route path='/detail/:id' component={Productscreen} />
+              <Route path='/cart/:id?' component={Cartscreen} />
+              <Route
+                path='/featuredproducts'
+                component={() => (
+                  <Productgroupscreen title={`Featured Products`} />
+                )}
+              />
+              <Route
+                path='/topselling'
+                component={() => (
+                  <Productgroupscreen title={`Top Selling Products`} />
+                )}
+              />
+              <Route
+                path='/mobiles'
+                component={() => <Productgroupscreen title={`Mobiles`} />}
+              />
+              <Route
+                path='/mensfashion'
+                component={() => <Productgroupscreen title={`Men's Fashion`} />}
+              />
+              <Route
+                path='/womenfashion'
+                component={() => (
+                  <Productgroupscreen title={`Women's Fashion`} />
+                )}
+              />
+              <Route
+                path='/computers'
+                component={() => <Productgroupscreen title={`Computers`} />}
+              />
+              <Route path='/news' component={() => <NewsandCompany />} />
+              <Route path='/signin' component={() => <SigninScreen />} />
+              <Route path='/register' component={() => <Registerscreen />} />
+              <Route path='/shipping' component={() => <ShippingScreen />} />
+              <Route path='/payment' component={() => <Paymentscreen />} />
+              <Route
+                path='/placeorder'
+                component={() => <Placeorderscreen />}
+              />
+              <Route path='/search/:term' component={Searchresultscreen} />
+            </Switch>
+          </div>
+          <div className='lastSection'>
+            <Footer />
+          </div>
         </div>
       </Router>
     </>

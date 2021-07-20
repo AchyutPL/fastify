@@ -25,36 +25,38 @@ export default function Cartscreen(props) {
   console.log(cartitems);
   return (
     <>
-      {cartitems.length === 0 ? (
-        <>
-          <h2 style={{ textAlign: "center" }}>
-            Your Cart Is Empty <br />
-            <Link to='/' style={{ textDecoration: "none", fontSize: "15px" }}>
-              Back to Shopping
-            </Link>
-          </h2>
-        </>
-      ) : (
-        <h2 style={{ textAlign: "center" }}>Your Cart Items</h2>
-      )}
+      <div className='maincart'>
+        {cartitems.length === 0 ? (
+          <>
+            <h2 style={{ textAlign: "center" }}>
+              Your Cart Is Empty <br />
+              <Link to='/' style={{ textDecoration: "none", fontSize: "15px" }}>
+                Back to Shopping
+              </Link>
+            </h2>
+          </>
+        ) : (
+          <h2 style={{ textAlign: "center" }}>Your Cart Items</h2>
+        )}
 
-      {cartitems.map((item) => (
-        <div className='maincart'>
-          <div className='cartSub'>
-            <div className='cartItems'>
-              <img src={item.path} alt={item.productname} />
-              <p>{item.productname}</p>
-              <p>Rs.{item.price}</p>
-              <p style={{ width: "70px" }}>Qty: 1</p>
-              <div>
-                <button onClick={() => removeCartHandler(item.product)}>
-                  Remove
-                </button>
+        {cartitems.map((item) => (
+          <div className='maincart'>
+            <div className='cartSub'>
+              <div className='cartItems'>
+                <img src={item.path} alt={item.productname} />
+                <p>{item.productname}</p>
+                <p>Rs.{item.price}</p>
+                <p style={{ width: "70px" }}>Qty: 1</p>
+                <div>
+                  <button onClick={() => removeCartHandler(item.product)}>
+                    Remove
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 }

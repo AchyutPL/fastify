@@ -50,7 +50,7 @@ export default function Searchresultscreen(props) {
                 </Link>
               </div>
               <div className='price'>Rs.{searchdatas.price}</div>
-              <div className='discount'> Rs.700</div>
+              <div className='discount'> Rs.{searchdatas.discount}</div>
             </div>
           ))}
         </div>

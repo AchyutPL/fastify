@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -18,4 +19,8 @@ code {
 .darkMode {
   height: 100%;
   background-color: black;
+}
+
+.occupy {
+  min-height: 300px;
 }
