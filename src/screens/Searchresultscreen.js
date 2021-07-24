@@ -6,6 +6,7 @@ import Axios from "axios";
 import "../cssfiles/searchscreen/searchscreen.css";
 export default function Searchresultscreen(props) {
   const searchterm = props.match.params.term;
+
   const [searchData, setsearchData] = useState([]);
   const [loading, setloading] = useState(true);
   useEffect(() => {

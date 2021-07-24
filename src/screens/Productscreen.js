@@ -8,6 +8,8 @@ import Loading from "../components/Loading";
 import Error from "../components/Error";
 import { useHistory } from "react-router";
 import HomeIcon from "@material-ui/icons/Home";
+import ReactImageMagnify from "react-image-magnify";
+import { Link } from "react-router-dom";
 export default function Productscreen(props) {
   const productId = props.match.params.id;
   const screenData = useSelector((state) => state.screenData);
@@ -47,14 +49,29 @@ export default function Productscreen(props) {
               <HomeIcon
                 style={{ position: "relative", top: "5px", color: "red" }}
               />
-              Home {">"} {product.category} {">"} {product.productname}
+              <Link to='/'> Home</Link> {">"} {product.category} {">"}{" "}
+              {product.productname}
             </p>
+
             <div className='mainProductSection'>
               <div className='productImage'>
-                <img
-                  className='mainImg'
-                  src={product.path}
-                  alt={product.productname}
+                <ReactImageMagnify
+                  {...{
+                    smallImage: {
+                      alt: "Wristwatch by Ted Baker London",
+                      isFluidWidth: true,
+                      src: product.path,
+                    },
+                    largeImage: {
+                      src: product.path,
+                      width: 1200,
+                      height: 1800,
+                    },
+                    enlargedImageContainerDimensions: {
+                      width: "200%",
+                      height: "100%",
+                    },
+                  }}
                 />
               </div>
               <div className='productBuyingDetails'>
